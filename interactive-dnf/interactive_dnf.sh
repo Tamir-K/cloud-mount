@@ -3,7 +3,7 @@
 readonly basename="${0##*/}"
 
 if ! command -v fzf >/dev/null 2>&1; then
-    printf "Error: Missing dep: fzf is required to use ${basename}.\n" >&2
+    echo "Error: Missing dep: fzf is required to use ${basename}." >&2
     exit 64
 fi
 
