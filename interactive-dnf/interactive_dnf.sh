@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-readonly basename="$(basename "$0")"
+readonly basename="${0##*/}"
 
 if ! command -v fzf >/dev/null 2>&1; then
     printf "Error: Missing dep: fzf is required to use ${basename}.\n" >&2
