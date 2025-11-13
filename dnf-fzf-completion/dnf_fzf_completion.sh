@@ -1,7 +1,7 @@
 _fzf_complete_dnf() {
 	case "$@" in
 		"dnf ** dnf")
-			_fzf_complete --multi --reverse --prompt="Choose command> " --preview="dnf info {}" --preview-window=67% -- "$@" < <(
+			_fzf_complete --multi --reverse --prompt="Choose command> " -- "$@" < <(
 				printf "%s\n" install remove update
 			)
 			;;
