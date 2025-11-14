@@ -4,13 +4,13 @@ ls_bash_imp() {
 
     # Check if the argument is a directory
     if [[ ! -d $dir ]]; then
-        echo "Error: '$dir' is not a directory." >&2
+        echo "Error: '${dir}' is not a directory." >&2
         return 1
     fi
 
     local prev=$(shopt -p nullglob)
     shopt -s nullglob
     local files=(${dir}/*)
-    eval $prev
+    eval "${prev}"
     printf '%s\n' "${files[@]##*/}"
 }
