@@ -62,7 +62,7 @@ Using a classic bash approach for reading a file, we traverse each line in cpuin
 check if we get a pattern match, and if so, increment our count by 1. Nothing special.
 Our pattern matching here works, as thankfully, /proc/cpuinfo only has a single field per line.
 While this seems to be quite memory efficient, due to holding only a single line in memory at any given moment,
-I think this would be the least performant implementation ut of the bunch.
+I think this would be the least performant implementation of the bunch.
 
 ```
 #!/usr/bin/env bash
