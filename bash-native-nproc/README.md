@@ -119,9 +119,9 @@ While a bit more verbose, we could apply the same principle to the version that 
 # nproc_bash_pattern_count_map.sh
 pattern='processor'
 mapfile </proc/cpuinfo file
-temp1="${file[*]}"
-temp2="${file[*]//${pattern}/}"
-(( count = (${#temp1} - ${#temp2}) / ${#pattern} ))
+file="${file[*]}"
+temp="${file//${pattern}/}"
+(( count = (${#file} - ${#temp}) / ${#pattern} ))
 echo $count
 ```
 
